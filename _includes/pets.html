@@ -34,7 +34,7 @@ site: Pet Photos
     <a class = "text-white hover:bg-yellow-900 active:bg-green-700" href="{{'/aboutUs' | url}}">About Us</a>
 
 </div>
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-2">
 <div class="photo">
 {{content}}
 </div>
@@ -54,9 +54,9 @@ site: Pet Photos
         background-color: rgb( var(--red), var(--green), var(--blue) );
    }
     </style>   
-     <h3> Available Details:</h3>
+     
      <ul>
-
+        <h3> Available Details:</h3>
          {% if photo.data.photo_location_city != '' %}
          <li>
              City: {{photo.data.photo_location_city}}
