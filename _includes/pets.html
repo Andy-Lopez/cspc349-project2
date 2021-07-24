@@ -2,8 +2,9 @@
 site: Pet Photos
 ---
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-    <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="{{ '/styles/main.css' | url }}"> -->
+            <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
 </head>
 
 {% for photo in collections.photos %}
@@ -14,27 +15,26 @@ site: Pet Photos
 {% endfor %} 
 <!-- Added site name to header/NAV -->
 <!-- <header> -->
-    <h1>{{ site }}</h1>
+    <h1 class = "text-4xl font-bold">{{ site }}</h1>
 
 <!-- </header> -->
 
 
 
 
-
-
-<div class="nav">
+<!-- The nav bar -->
+<div class="grid grid-cols-2 bg-gray-900 overflow-hidden justify-items-center">
     
     {% unless page.url != '/' %}
-    <a class="active" href="{{'/' | url}}">Home</a>
+    <a class="text-white hover:bg-yellow-900 active:bg-green-700" href="{{'/' | url}}">Home</a>
     {% endunless%}
     {% if page.url != '/'%}
-    <a href="{{'/' | url}}">Home</a>
+    <a class= "text-white hover:bg-yellow-900 active:bg-green-700"  href="{{'/' | url}}">Home</a>
     {% endif%}
-    <a href='/cspc349-project2/aboutUs/'>About Us</a>
+    <a class = "text-white hover:bg-yellow-900 active:bg-green-700" href="{{'/aboutUs' | url}}">About Us</a>
 
 </div>
-<div class="wrapper">
+<div class="grid grid-cols-3">
 <div class="photo">
 {{content}}
 </div>
@@ -75,7 +75,7 @@ site: Pet Photos
              Username: {{photo.data.photographer_username}}
          </li>
          <li>
-             <a href="{{photo.data.photo_url | url}}">Source</a> 
+             <a class = "hover:underline hover:bg-blue-700" href="{{photo.data.photo_url | url}}">Source</a> 
          
          </li>
      </ul>
@@ -98,7 +98,7 @@ site: Pet Photos
 
  <!-- Rendering the pageable tab -->
 </div>
- <div class="pagination ">
+ <div class="grid  grid-cols-3 bg-gray-900  overflow-hidden justify-items-center" >
  <!-- Rendering the pageable tab when the current page is not the first or last page -->
  {% if numpage >  0  and numpage < 99 %}  
      <!-- add 00 to the lvalue and rvalue before convert back to string -->               
@@ -120,31 +120,31 @@ site: Pet Photos
      {% endif %}      
 
 
-    <a  class="hoover_to_purple" href="{{ lurl |url }}">Previous</a>   &nbsp;
-    <a   href="">{{numpage}}</a>        &nbsp;
-    <a  class="hoover_to_purple" href="{{ rurl | url }}">Next</a>   
+    <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="{{ lurl |url }}">Previous</a>  
+    <a   href="">{{numpage}}</a>    
+    <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="{{ rurl | url }}">Next</a>   
 
     <!-- Rendering the pageable tab when the current page is nthe last page -->    
     {% elsif numpage ==  99 %}
         {% capture lurl  %}{{ "/photos/0xx/" | replace: "xx", lValue }}{% endcapture %}             
-        <a  class="hoover_to_purple" href="{{ lurl | url }}">Previous</a>   &nbsp;
-        <a   href="">{{numpage}}</a>        &nbsp;
-        <a  class="hoover_to_purple" href="">Next</a>    
+        <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="{{ lurl | url }}">Previous</a>
+        <a   href="">{{numpage}}</a>      
+        <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="">Next</a>    
     <!-- Rendering the pageable tab when the current page is first page --> 
     {% elsif numpage ==  0 %}
         {% capture rurl  %}{{ "/photos/00xx/" | replace: "xx", rValue }}{% endcapture %}                
-        <a  class="hoover_to_purple" href="">Previous</a>           &nbsp;
-        <a   href="">{{numpage}}</a>        &nbsp;
-        <a  class="hoover_to_purple" href="{{ rurl | url }}">Next</a>              
+        <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="">Previous</a>         
+        <a   href="">{{numpage}}</a>       
+        <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="{{ rurl | url }}">Next</a>              
     {% endif %}                      
  
 </div>
 <!-- ===========END============implementing pageble nav by Bradley coding in liquid========================-->
-<div class="container">
+<div>
     {% unless page.url != '/' %}
-    <ul class="no-bullets">
+    <ul class="grid grid-cols-3">
         {% for photo in collections.photos %}
-            <li>
+            <li class="hover:underline hover:text-blue-700 text-blue-500">
                 
                 <a href="{{ photo.url | url }}">
                     A {{ photo.data.photo_keyword }} photo
@@ -165,11 +165,11 @@ site: Pet Photos
 
         <!-- Added Copyright symbol, credit to Bradley -->
         <p>&copy;Copyright Team 6. All rights Reserved!</p>
-       <div class="nav ">
-        <h3>Site Map:</h3>
-        <a href="{{'/' | url}}">Home </a>
+       <div class="grid grid-cols-3 bg-gray-900 overflow-hidden justify-items-center">
+        <h3 class = "text-white text-2xl font-bold">Site Map:</h3>
+        <a class = "text-white hover:bg-yellow-900"href="{{'/' | url}}">Home </a>
       
-        <a href='/cspc349-project2/aboutUs/'>About Us</a>
+        <a class = "text-white hover:bg-yellow-900" href="{{'/aboutUs' | url}}">About Us</a>
    
 </div>
 </div>
