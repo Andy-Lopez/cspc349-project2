@@ -6,7 +6,8 @@
 @layer components {
 
     .custom-tailwind {
-        @apply text-white bg-blue-500
+        /* @apply text-white bg-blue-500 */
+        
     }
 
 }
