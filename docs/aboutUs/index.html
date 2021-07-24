@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-    <link rel="stylesheet" href='/cspc349-project2/styles/main.css'>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href='/cspc349-project2/styles/main.css'> -->
+    <link rel="stylesheet" href="/cspc349-project2/styles/tailwind.css">
 
 </head>
 <body>
-    <div class="nav">
+<!-- The nav bar -->
+<div class="bg-black overflow-hidden">
     
-        
-        
-        <a href="/cspc349-project2/">Home</a>
-        
-        <a class="active"  href='/cspc349-project2/aboutUs/'>About Us</a>
     
-    </div>
-    <main>
+    
+    <a class= "text-white hover:bg-yellow-900 active:bg-green-700"  href="/cspc349-project2/">Home</a>
+    
+    <a class = "text-white hover:bg-yellow-900 active:bg-green-700" href="/cspc349-project2/aboutUs">About Us</a>
 
-        <h1>About Us</h1>
+</div>
+    <main class = "grid grid-cols-1 grid-rows-5">
+
+        <h1 class = "text-4xl font-bold">About Us</h1>
         <p>       
             As a team, we implemented a website showcasing pet 
             photos. We extracted information about the pet photos 
@@ -71,17 +73,17 @@
         </ul>
 
     <hr>
-
-       
-    </div>
+                <!-- Added Copyright symbol, credit to Bradley -->
+                <p>&copy;Copyright Team 6. All rights Reserved!</p>
+                <div class="nav bg-black overflow-hidden">
+                 <h3 class = "text-white text-2xl font-bold">Site Map:</h3>
+                 <a class = "text-white hover:bg-yellow-900"href="/cspc349-project2/">Home </a>
+               
+                 <a class = "text-white hover:bg-yellow-900" href="/cspc349-project2/aboutUs">About Us</a>
+            
+         </div>
+    
 </main>
     </p>
-        <!-- Added Copyright symbol, credit to Bradley -->
-        <p>&copy;Copyright Team 6. All rights Reserved!</p>
-        <div class="nav ">
-            <h3>Site Map:</h3>
-            <a href="/cspc349-project2/">Home </a>
-          
-            <a href='/cspc349-project2/aboutUs/'>About Us</a>
 </body>
 </html>

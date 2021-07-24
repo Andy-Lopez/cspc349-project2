@@ -1,6 +1,7 @@
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-    <link rel="stylesheet" href="/cspc349-project2/styles/main.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="/cspc349-project2/styles/main.css"> -->
+            <link rel="stylesheet" href="/cspc349-project2/styles/tailwind.css">
 </head>
 
 
@@ -209,25 +210,24 @@
  
 <!-- Added site name to header/NAV -->
 <!-- <header> -->
-    <h1>Pet Photos</h1>
+    <h1 class = "text-4xl font-bold">Pet Photos</h1>
 
 <!-- </header> -->
 
 
 
 
-
-
-<div class="nav">
+<!-- The nav bar -->
+<div class="grid grid-cols-2 bg-gray-900 overflow-hidden justify-items-center">
     
     
     
-    <a href="/cspc349-project2/">Home</a>
+    <a class= "text-white hover:bg-yellow-900 active:bg-green-700"  href="/cspc349-project2/">Home</a>
     
-    <a href='/cspc349-project2/aboutUs/'>About Us</a>
+    <a class = "text-white hover:bg-yellow-900 active:bg-green-700" href="/cspc349-project2/aboutUs">About Us</a>
 
 </div>
-<div class="wrapper">
+<div class="grid grid-cols-3">
 <div class="photo">
     <figure>
         <img src="https://images.unsplash.com/photo-1550206574-42cfa61e2a9d" height="600" />
@@ -265,7 +265,7 @@
              Username: jaredmurray
          </li>
          <li>
-             <a href="https://unsplash.com/photos/RApQxN_Js5Y">Source</a> 
+             <a class = "hover:underline hover:bg-blue-700" href="https://unsplash.com/photos/RApQxN_Js5Y">Source</a> 
          
          </li>
      </ul>
@@ -486,18 +486,18 @@
 
  <!-- Rendering the pageable tab -->
 </div>
- <div class="pagination ">
+ <div class="grid  grid-cols-3 bg-gray-900  overflow-hidden justify-items-center" >
  <!-- Rendering the pageable tab when the current page is not the first or last page -->
  
                         
-        <a  class="hoover_to_purple" href="">Previous</a>           &nbsp;
-        <a   href="">0</a>        &nbsp;
-        <a  class="hoover_to_purple" href="/cspc349-project2/photos/001/">Next</a>              
+        <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="">Previous</a>         
+        <a   href="">0</a>       
+        <a  class="text-white hover:text-yellow-900 active:bg-green-700" href="/cspc349-project2/photos/001/">Next</a>              
                           
  
 </div>
 <!-- ===========END============implementing pageble nav by Bradley coding in liquid========================-->
-<div class="container">
+<div>
     
     </ul>
 </div>
@@ -506,11 +506,11 @@
 
         <!-- Added Copyright symbol, credit to Bradley -->
         <p>&copy;Copyright Team 6. All rights Reserved!</p>
-       <div class="nav ">
-        <h3>Site Map:</h3>
-        <a href="/cspc349-project2/">Home </a>
+       <div class="grid grid-cols-3 bg-gray-900 overflow-hidden justify-items-center">
+        <h3 class = "text-white text-2xl font-bold">Site Map:</h3>
+        <a class = "text-white hover:bg-yellow-900"href="/cspc349-project2/">Home </a>
       
-        <a href='/cspc349-project2/aboutUs/'>About Us</a>
+        <a class = "text-white hover:bg-yellow-900" href="/cspc349-project2/aboutUs">About Us</a>
    
 </div>
 </div>
